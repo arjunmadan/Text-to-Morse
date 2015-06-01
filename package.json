@@ -8,7 +8,11 @@
   },
   "dependencies": {
     "express": "~4.9.x",
-    "twilio": "~2.2.1"
+    "twilio": "~2.2.x",
+    "mocha": "~2.2.x",
+    "istanbul": "0.3.x",
+    "uglify-js": "2.3.x",
+    "jshint": "2.8.x"
   },
   "engines": {
     "node": "0.12.2"
