@@ -16,6 +16,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(request, response) {
   //Gets the content of the text message.
   var text = request.query.Body;
+  console.log("Message received.");
   console.log(text);
 
   //Sends the message to the Spark Core.
