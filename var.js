@@ -15,4 +15,5 @@ function sendMessage(text) {
 	}
 }
 
+//Functions exported to be used in other files.
 exports.sendMessage = sendMessage;
