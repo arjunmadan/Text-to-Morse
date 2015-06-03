@@ -55,12 +55,12 @@ function sendToSpark(letter) {
 	//Call dot(), dash() or space() depending on sequence of characters
 
 	for(i = 0; i < letter.length(); i++) {
-		console.log("Char: " + letter[i]);
-		if(letter[i] == ".")
+		console.log("Char: " + letter.charAt(i));
+		if(letter.charAt(i) == ".")
 			sparkFunctions.dot();
-		else if(letter[i] == "_")
+		else if(letter.charAt(i) == "_")
 			sparkFunctions.dash();
-		else if(letter[i] == " ")
+		else if(letter.charAt(i) == " ")
 			sparkFunctions.space();
 	}
 }
