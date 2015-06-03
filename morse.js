@@ -51,18 +51,15 @@ function convertToMorse(text) {
 		
 		//Call dot(), dash() or space() depending on sequence of characters
 		
-		for(var i in charCodes[text.charAt(i)]) {
-			if(i == ".")
+		for(var j = 0; j < charCodes[text.charAt(i)].length; j++) {
+			if(j == ".")
 				sparkFunctions.dot();
-			else if(i == "_")
+			else if(j == "_")
 				sparkFunctions.dash();
-			else if(i == " ")
+			else if(j == " ")
 				sparkFunctions.space();	
 		}
-		
-
 	}
-
 }
 
 exports.convertToMorse = convertToMorse;
