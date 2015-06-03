@@ -45,22 +45,21 @@ charCodes[" "]= " ";
 function convertToMorse(text) {
 	console.log("In convertToMorse:" + text);
 	for(var i = 0; i < text.length; i++) {
-		console.log("Length:" + text.length);
-		console.log(text.charAt(i));
-		console.log("convertToMorse: " + String(charCodes[text.charAt(i)]));
 		
 		//Call dot(), dash() or space() depending on sequence of characters
-		
-		for(var j = 0; j < charCodes[text.charAt(i)].length; j++) {
-			if(j == ".") {
+		letter = text.charAt(i);
+		for(var j = 0; j < charCodes[letter].length; j++) {
+			code = charCodes[letter].charAt(j)
+			console.log(code);
+			if(code == ".") {
 				sparkFunctions.dot();
 				console.log(".");
 			}
-			else if(j == "_") {
+			else if(code == "_") {
 				console.log("-");
 				sparkFunctions.dash();
 			}
-			else if(j == " ") {
+			else if(code == " ") {
 				console.log("_");
 				sparkFunctions.space();	
 			}
