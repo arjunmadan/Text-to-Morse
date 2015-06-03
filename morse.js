@@ -2,7 +2,7 @@
 var sparkFunctions = require('./spark-functions.js');
 
 //Morse code array
-var charCodes=new Array(36); 
+var charCodes=new Array(37);
 
 charCodes["a"]="._";
 charCodes["b"]="_...";
@@ -56,7 +56,7 @@ function sendToSpark(letter) {
 	console.log(letter);
 	//Call dot(), dash() or space() depending on sequence of characters
 	for(it in letter) {
-		console.log(it);
+		console.log("Char: " + it);
 		if(it == ".")
 			sparkFunctions.dot();
 		else if(it == "_")
