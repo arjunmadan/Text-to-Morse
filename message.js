@@ -1,4 +1,4 @@
-//Required modules.
+//Required modules
 var spark = require('spark');
 var validator = require('validator');
 var morse = require('./morse.js')
@@ -9,7 +9,7 @@ function sendMessage(text) {
 	
 	//Make call to function that sends the message.
 	if(validator.isAlphanumeric(text)) {
-		morse.convertToMorse(text.toLowerCase());
+		morse.convertToMorse(text);
 	}
 
 	else {

@@ -1,5 +1,7 @@
+//Required modules
 var sparkFunctions = require('./spark-functions.js');
 
+//Morse code array
 var charCodes=new Array(36); 
 
 charCodes["a"]="._";
