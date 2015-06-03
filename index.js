@@ -20,6 +20,13 @@ app.get('/', function(request, response) {
 
   //Sends the message to the for processing.
   message.sendMessage(text);
+
+  client.messages.create({
+			to:request.query.To,
+			from:request.query.From,
+			body:"Message received."
+			}, function(err, text) {
+				console.log( JSON.stringify(err, null, 4));
   
 });
 
