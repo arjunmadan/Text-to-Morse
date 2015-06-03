@@ -45,6 +45,7 @@ charCodes[" "]= " ";
 function convertToMorse(text) {
 	console.log("In convertToMorse");
 	for(it in text) {
+		console.log(it);
 		console.log("convertToMorse: " + String(charCodes[it]));
 		
 		//Call dot(), dash() or space() depending on sequence of characters
