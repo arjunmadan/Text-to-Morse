@@ -52,12 +52,18 @@ function convertToMorse(text) {
 		//Call dot(), dash() or space() depending on sequence of characters
 		
 		for(var j = 0; j < charCodes[text.charAt(i)].length; j++) {
-			if(j == ".")
+			if(j == ".") {
 				sparkFunctions.dot();
-			else if(j == "_")
+				console.log(".");
+			}
+			else if(j == "_") {
+				console.log("-");
 				sparkFunctions.dash();
-			else if(j == " ")
+			}
+			else if(j == " ") {
+				console.log("_");
 				sparkFunctions.space();	
+			}
 		}
 	}
 }
