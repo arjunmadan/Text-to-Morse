@@ -9,7 +9,7 @@ function sendMessage(text) {
 	
 	//Make call to function that sends the message.
 	if(validator.isAlphanumeric(text)) {
-		morse.convertToMorse(text);
+		morse.convertToMorse(text.toLowerCase());
 	}
 
 	else {

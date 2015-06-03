@@ -62,3 +62,5 @@ function sendToSpark(letter) {
 			sparkFunctions.space();
 	}
 }
+
+exports.convertToMorse = convertToMorse;
