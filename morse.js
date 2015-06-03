@@ -52,16 +52,15 @@ function convertToMorse(text) {
 }
 
 function sendToSpark(letter) {
-	console.log("In sendToSpark");
-	console.log(letter);
 	//Call dot(), dash() or space() depending on sequence of characters
-	for(it in letter) {
-		console.log("Char: " + it);
-		if(it == ".")
+
+	for(i = 0; i < letter.length(); i++) {
+		console.log("Char: " + letter[i]);
+		if(letter[i] == ".")
 			sparkFunctions.dot();
-		else if(it == "_")
+		else if(letter[i] == "_")
 			sparkFunctions.dash();
-		else if(it == " ")
+		else if(letter[i] == " ")
 			sparkFunctions.space();
 	}
 }
