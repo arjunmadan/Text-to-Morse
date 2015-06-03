@@ -44,13 +44,13 @@ charCodes[" "]= " ";
 
 function convertToMorse(text) {
 	console.log("In convertToMorse");
-	for(it in text) {
-		console.log(it);
-		console.log("convertToMorse: " + String(charCodes[it]));
+	for(var i = 0; i < text.length(); i++) {
+		console.log(text.charAt(i));
+		console.log("convertToMorse: " + String(charCodes[text.charAt(i)]));
 		
 		//Call dot(), dash() or space() depending on sequence of characters
 		
-		for(var i in charCodes[it]) {
+		for(var i in charCodes[text.charAt(i)]) {
 			if(i == ".")
 				sparkFunctions.dot();
 			else if(i == "_")
