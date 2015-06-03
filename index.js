@@ -22,8 +22,8 @@ app.get('/', function(request, response) {
 	message.sendMessage(text);
 
 	client.messages.create({
-		to:request.query.To,
-		from:request.query.From,
+		to:request.query.From,
+		from:request.query.To,
 		body:"Message received."
 		}, function(err, text) {
 			console.log( JSON.stringify(err, null, 4));

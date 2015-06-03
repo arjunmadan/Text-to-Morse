@@ -45,6 +45,7 @@ charCodes[" "]= " ";
 function convertToMorse(text) {
 	console.log("In convertToMorse:" + text);
 	for(var i = 0; i < text.length; i++) {
+		console.log("Length:" + text.length);
 		console.log(text.charAt(i));
 		console.log("convertToMorse: " + String(charCodes[text.charAt(i)]));
 		
