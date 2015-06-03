@@ -1,4 +1,4 @@
-var spark-functions = require('./spark-functions.js');
+var sparkFunctions = require('./spark-functions.js');
 
 var charCodes=new Array(36); 
 
@@ -53,10 +53,10 @@ function sendToSpark(letter) {
 	//Call dot(), dash() or space() depending on sequence of characters
 	for(it in letter) {
 		if(it == ".")
-			spark-functions.dot();
+			sparkFunctions.dot();
 		else if(it == "_")
-			spark-functions.dash();
+			sparkFunctions.dash();
 		else if(it == " ")
-			spark-functions.space();
+			sparkFunctions.space();
 	}
 }
