@@ -45,25 +45,22 @@ charCodes[" "]= " ";
 function convertToMorse(text) {
 	console.log("In convertToMorse");
 	for(it in text) {
-		sendToSpark(String(charCodes[it]));
+		console.log("convertToMorse: " + String(charCodes[it]));
+		
+		//Call dot(), dash() or space() depending on sequence of characters
+		
+		for(var i in charCodes[it]) {
+			if(i == ".")
+				sparkFunctions.dot();
+			else if(i == "_")
+				sparkFunctions.dash();
+			else if(i == " ")
+				sparkFunctions.space();	
+		}
+		
 
 	}
 
-}
-
-function sendToSpark(letter) {
-	console.log(letter);
-	
-	//Call dot(), dash() or space() depending on sequence of characters
-	for(var i = 0; i < letter.length(); i++) {
-		console.log("Char: " + letter.charAt(i));
-		if(letter.charAt(i) == ".")
-			sparkFunctions.dot();
-		else if(letter.charAt(i) == "_")
-			sparkFunctions.dash();
-		else if(letter.charAt(i) == " ")
-			sparkFunctions.space();
-	}
 }
 
 exports.convertToMorse = convertToMorse;
