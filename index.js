@@ -14,20 +14,20 @@ app.use(express.static(__dirname + '/public'));
 
 //Twilio processing
 app.get('/', function(request, response) {
-  //Gets the content of the text message.
-  var text = request.query.Body;
-  console.log(text);
+	//Gets the content of the text message.
+	var text = request.query.Body;
+	console.log(text);
 
-  //Sends the message to the for processing.
-  message.sendMessage(text);
+	//Sends the message to the for processing.
+	message.sendMessage(text);
 
-  client.messages.create({
-			to:request.query.To,
-			from:request.query.From,
-			body:"Message received."
-			}, function(err, text) {
-				console.log( JSON.stringify(err, null, 4));
-  
+	client.messages.create({
+		to:request.query.To,
+		from:request.query.From,
+		body:"Message received."
+		}, function(err, text) {
+			console.log( JSON.stringify(err, null, 4));
+		});
 });
 
 app.listen(app.get('port'), function() {
