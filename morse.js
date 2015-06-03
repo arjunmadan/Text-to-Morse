@@ -45,16 +45,17 @@ charCodes[" "]= " ";
 function convertToMorse(text) {
 	console.log("In convertToMorse");
 	for(it in text) {
-		sendToSpark(charCodes[it]);
+		sendToSpark(String(charCodes[it]);
 
 	}
 
 }
 
 function sendToSpark(letter) {
+	console.log(letter);
+	
 	//Call dot(), dash() or space() depending on sequence of characters
-
-	for(i = 0; i < letter.length(); i++) {
+	for(var i = 0; i < letter.length(); i++) {
 		console.log("Char: " + letter.charAt(i));
 		if(letter.charAt(i) == ".")
 			sparkFunctions.dot();
