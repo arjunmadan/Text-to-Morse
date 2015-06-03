@@ -45,7 +45,7 @@ charCodes[" "]= " ";
 function convertToMorse(text) {
 	console.log("In convertToMorse");
 	for(it in text) {
-		sendToSpark(String(charCodes[it]);
+		sendToSpark(String(charCodes[it]));
 
 	}
 
